@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+git ls-files "$@" | xargs aplay --quiet --channels=2
