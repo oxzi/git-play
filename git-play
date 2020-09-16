@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
 
-git ls-files "$@" | xargs aplay --quiet --channels=2
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	echo "YOUR OS IS DOING YOU A DISSERVICE."
+	exit
+else
+	git ls-files "$@" | xargs aplay --quiet --channels=2
+fi
